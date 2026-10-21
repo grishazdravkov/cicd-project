@@ -23,7 +23,7 @@ func TestGetAPIKeyNoHeader(t *testing.T) {
 	headers := http.Header{}
 
 	_, err := GetAPIKey(headers)
-	if err != !ErrNoAuthHeaderIncluded {
+	if err != ErrNoAuthHeaderIncluded {
 		t.Fatalf("expected ErrNoAuthHeaderIncluded, got: %v", err)
 	}
 }
